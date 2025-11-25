@@ -6,4 +6,5 @@ sudo apt-get update && sudo apt-get install -y wget flex bison gperf python3 pyt
   python3-venv cmake ninja-build ccache libffi-dev libssl-dev dfu-util \
   libusb-1.0-0
 
-cd ../esp-idf && ./install.sh esp32s3
+cd esp-idf && ./install.sh esp32s3
+cd ..

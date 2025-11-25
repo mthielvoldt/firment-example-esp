@@ -1,0 +1,31 @@
+{
+  "configurations": [
+    {
+      "name": "test",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/test/build/example_test",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}/test",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Set Disassembly Flavor to Intel",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "build-tests"
+    },
+
+  ],
+  "version": "2.0.0"
+}

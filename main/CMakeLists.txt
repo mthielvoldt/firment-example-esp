@@ -9,7 +9,7 @@ endif()
 
 idf_component_register(
   SRCS 
-    "main.c"
+    "firment_example_main.c"
   INCLUDE_DIRS "."
   PRIV_REQUIRES ${requires}
 )

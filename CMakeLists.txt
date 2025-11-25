@@ -3,9 +3,15 @@ cmake_minimum_required(VERSION 3.31)
 
 # Use idf shipped with this repo if IDF_PATH environment variable not set.
 # Allows user to skip fetching the heavy idf submodule if already on system.
-if(NOT $ENV{IDF_PATH})
-  set(ENV{IDF_PATH} esp-idf)
+if(NOT DEFINED ENV{IDF_PATH})
+  message(STATUS "Using project's idf.")
+  set(ENV{IDF_PATH} ${CMAKE_CURRENT_LIST_DIR}/esp-idf)
+else()
+  message(STATUS "Using provided idf at $ENV{IDF_PATH}.")
 endif()
+
+set(IDF_TARGET esp32s3)
+
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
 
 # Build only the minimal set of components, main, and anything it depends on.

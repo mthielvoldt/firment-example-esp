@@ -9,7 +9,9 @@
         "test",
         "main",
         "build",
+        "build/_deps/fmt-transport-iface-src",
         "build/config",      // sdkconfig.h
+        "build/esp-idf/pb",
         "esp-idf/components/freertos/FreeRTOS-Kernel/include",
         "esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos",
         "esp-idf/components/freertos/config/include/freertos",
@@ -17,7 +19,11 @@
         "esp-idf/components/newlib/platform_include/**",
         "esp-idf/components/xtensa/include",
         "esp-idf/components/xtensa/esp32s3/include",
-        "esp-idf/components/xtensa/include/xtensa/dummyDir"
+        "esp-idf/components/xtensa/include/xtensa/dummyDir",
+        "components/fmt_base/firment-base/inc",
+        "components/fmt_base/firment-base/src",  // fmt_base_msg.h
+        "components/fmt_base/firment-base/submodules/nanopb",
+        "components/fmt_queue/inc"
       ],
       "forcedInclude": [],
       "cStandard": "c11",

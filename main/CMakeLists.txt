@@ -1,4 +1,4 @@
-set(requires esp-tls nvs_flash esp_netif)
+set(requires esp-tls nvs_flash esp_netif fmt_base)
 idf_build_get_property(target IDF_TARGET)
 
 if(${target} STREQUAL "linux")
